@@ -1,3 +1,4 @@
+/*Q7. Develop a C program to print a binary pyramid pattern*/
 #include<stdio.h>
 int main(){
     int n;
