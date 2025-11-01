@@ -4,17 +4,17 @@
 #include <stdio.h>
 int main()
 {
-    int n, x, y, z = 0;
+    int n, a, b, c = 0;
     printf("enter your max limit:");
     scanf("%d", &n);
-    x = 0;
-    y = 1;
-    while (z <= n)
+    a = 0;
+    b = 1;
+    while (c <= n)
     {
         printf("%d", z);
-        x = y;
-        y = z;
-        z = x + y;
+        a = b;
+        b = c;
+        c = a + b;
     }
     return 0;
 }
