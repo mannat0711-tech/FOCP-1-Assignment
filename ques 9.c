@@ -14,7 +14,7 @@ int main()
         if (scores[i] == 99) {
             found = 1;
             printf("First occurrence of score 99 found at position %d.\n", i + 1);
-            break;  // Stop after finding first occurrence
+            break;  
         }
     }
 return 0;
