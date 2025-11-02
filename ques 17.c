@@ -1,3 +1,5 @@
+/*Q17. Design a C program to delete an element from the front, middle, or end of an array, and print
+the array before and after deletion.*/
 #include <stdio.h>
 int main()
 {
