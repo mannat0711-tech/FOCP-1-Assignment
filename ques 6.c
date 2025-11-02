@@ -26,7 +26,7 @@ hardware-level design.*/
         return binary;
     }
 
-    int main() {
+   {
         int choice, number;
 
         printf("Choose conversion type:\n");
