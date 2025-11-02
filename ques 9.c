@@ -1,21 +1,32 @@
 /*Q9. Design a C program to find the first occurrence of the score “99” in an array, focusing on linear
 search and data retrieval techniques.*/
 #include <stdio.h>
-int main()
+    int main()
 {
-    int scores[100], n, i, found = 0;
-    printf("Enter number of scores: ");
-    scanf("%d", &n);
-    printf("Enter %d scores: ", n);
-    for (i = 0; i < n; i++) {
+    int a;
+    printf("Enter the number of scores: ");
+    scanf("%d", &a);
+    int scores[a];
+    int i, found = 0;
+    printf("Enter %d scores:\n", a);
+    for (i = 0; i < a; i++)
+    {
         scanf("%d", &scores[i]);
     }
-    for (i = 0; i < n; i++) {
-        if (scores[i] == 99) {
+    for (i = 0; i < a; i++)
+    {
+        if (scores[i] == 99)
+        {
+            printf("The first occurrence of Score 99 is at position %d.\n", i + 1);
             found = 1;
-            printf("First occurrence of score 99 found at position %d.\n", i + 1);
-            break;  
+            break;
         }
     }
-return 0;
+    if (found == 0)
+    {
+        printf("Score 99 was not found in the list.\n");
+    }
+
+    return 0;
 }
+
