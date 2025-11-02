@@ -1,13 +1,40 @@
 /*Q13. Design a C program to find a peak element that is not smaller than its neighbours.*/
-#include<stdio.h>
-int main(){
-    int arr[]={1,3,20,4,1,0};
-    int n= sizeof(arr)/sizeof(arr[0]);
-    for(int i=1;i<n-1;i++){
-        if(arr[i]>=arr[i-1] && arr[i]>=arr[i+1]){
-            printf("Peak element is %d at index %d",arr[i],i);
-            break;
+#include <stdio.h>
+int main()
+{
+    int arr[100];
+    int n, i;
+    printf("Enter number of elements in the array: ");
+    scanf("%d", &n);
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    if (n == 1)
+    {
+        printf("Peak element is: %d\n", arr[0]);
+        return 0;
+    }
+    if (arr[0] >= arr[1])
+    {
+        printf("Peak element is: %d\n", arr[0]);
+        return 0;
+    }
+    if (arr[n - 1] >= arr[n - 2])
+    {
+        printf("Peak element is: %d\n", arr[n - 1]);
+        return 0;
+    }
+    for (i = 1; i < n - 1; i++)
+    {
+if (arr[i] >= arr[i - 1] && arr[i] >= arr[i + 1])
+        {
+            printf("Peak element is: %d\n", arr[i]);
+            return 0;
         }
     }
+    printf("No peak element found.\n");
     return 0;
 }
+
